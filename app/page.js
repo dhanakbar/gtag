@@ -3,10 +3,11 @@ import Image from 'next/image'
 export default function Home() {
 
   const onClickGaTag = () => {
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag("event", "click", { value: "" });
-      console.log("click")
-    }
+    gtag('event', 'aaa', {
+      'event_category': 'bbb',
+      'event_label': 'ccc'
+    });
+    console.log("clicked")
   }
   return (
     <main className="bg-blue-100 w-screen h-screen flex justify-center items-center">
